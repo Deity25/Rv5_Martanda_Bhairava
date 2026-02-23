@@ -1,0 +1,434 @@
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 14px rgba(255, 201, 76, 0.35);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(255, 201, 76, 0.65);
+    transform: scale(1.06);
+  }
+}
+
+@keyframes loaderFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes tiltKirit {
+  0%,
+  100% {
+    transform: rotateY(-8deg) rotateX(4deg) translateY(0px);
+  }
+  25% {
+    transform: rotateY(8deg) rotateX(-2deg) translateY(-4px);
+  }
+  50% {
+    transform: rotateY(0deg) rotateX(6deg) translateY(-6px);
+  }
+  75% {
+    transform: rotateY(-10deg) rotateX(-1deg) translateY(-2px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+@keyframes softRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes verticalDrift {
+  0%,
+  100% {
+    transform: translateY(0px);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-18px);
+    opacity: 0.9;
+  }
+}
+
+@keyframes glowStreak {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: translateX(-20px);
+  }
+  50% {
+    opacity: 0.85;
+    transform: translateX(20px);
+  }
+}
+
+@keyframes riseIn {
+  0% {
+    opacity: 0;
+    transform: translateY(28px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes swordSpin {
+  0% {
+    transform: rotateY(0deg) rotateZ(0deg);
+  }
+  50% {
+    transform: rotateY(180deg) rotateZ(2deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateZ(0deg);
+  }
+}
+
+@keyframes haloSweep {
+  0% {
+    opacity: 0.15;
+    transform: translate(-20%, -10%) rotate(0deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translate(15%, 6%) rotate(180deg);
+  }
+  100% {
+    opacity: 0.15;
+    transform: translate(-20%, -10%) rotate(360deg);
+  }
+}
+
+@keyframes bhandaraDrop {
+  0% {
+    transform: translateY(-20px) translateX(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(120vh) translateX(var(--drift, 30px)) scale(0.4);
+    opacity: 0;
+  }
+}
+
+.loader-kirit {
+  animation: loaderFloat 3.2s ease-in-out infinite;
+}
+
+.loader-kirit.jai-logo {
+  animation: none;
+}
+
+.tilak-line,
+.tilak-dot {
+  animation: pulseGlow 1.8s ease-in-out infinite;
+}
+
+.kirit-3d {
+  animation: tiltKirit 8.5s ease-in-out infinite;
+}
+
+.kirit-3d.jai-logo {
+  animation: none;
+  transform: none;
+}
+
+.tilak-glow {
+  animation: pulseGlow 2.4s ease-in-out infinite;
+}
+
+.panel,
+.stat-card,
+.story-card,
+.song-card,
+.art-card,
+.timeline-item,
+.glossary-card,
+.table-wrap {
+  position: relative;
+  isolation: isolate;
+}
+
+.panel::after,
+.story-card::after,
+.song-card::after,
+.art-card::after,
+.timeline-item::after,
+.glossary-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 10%,
+    rgba(255, 219, 141, 0.18) 50%,
+    rgba(255, 255, 255, 0) 90%
+  );
+  background-size: 280% 100%;
+  background-position: -240% 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.panel:hover::after,
+.story-card:hover::after,
+.song-card:hover::after,
+.art-card:hover::after,
+.timeline-item:hover::after,
+.glossary-card:hover::after {
+  opacity: 1;
+  animation: shimmer 1.4s linear forwards;
+}
+
+.story-card,
+.song-card,
+.art-card,
+.glossary-card,
+.timeline-item,
+.panel,
+.stat-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.story-card:hover,
+.song-card:hover,
+.art-card:hover,
+.glossary-card:hover,
+.panel:hover,
+.stat-card:hover,
+.timeline-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3), 0 0 14px rgba(255, 196, 74, 0.18);
+  border-color: rgba(255, 215, 132, 0.5);
+}
+
+.sword-panel::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 202, 91, 0.33) 0,
+    rgba(255, 202, 91, 0.08) 35%,
+    rgba(255, 202, 91, 0) 70%
+  );
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: haloSweep 8s ease-in-out infinite;
+  z-index: -1;
+}
+
+.khanda-spin {
+  animation: swordSpin 8.2s linear infinite;
+  transform-style: preserve-3d;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.45));
+}
+
+.section-frame::before {
+  animation: softRotate 20s linear infinite;
+}
+
+.section-frame::after {
+  animation: verticalDrift 10s ease-in-out infinite;
+}
+
+.hero-cta-row .btn {
+  animation: riseIn 0.75s ease both;
+}
+
+.hero-cta-row .btn:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.hero-cta-row .btn:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.hero-cta-row .btn:nth-child(4) {
+  animation-delay: 0.28s;
+}
+
+.section-head h2,
+.section-head p,
+.panel,
+.table-wrap,
+.story-card,
+.song-card,
+.art-card,
+.timeline-item,
+.glossary-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.64s ease, transform 0.64s ease;
+}
+
+.in-view {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.hero-particle {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 213, 125, 0.95), rgba(255, 191, 0, 0.5));
+  box-shadow: 0 0 12px rgba(255, 200, 70, 0.55);
+  pointer-events: none;
+  animation: bhandaraDrop linear infinite;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: -12%;
+  top: 8%;
+  width: 45%;
+  height: 70%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 192, 72, 0.22) 0,
+    rgba(255, 192, 72, 0.06) 35%,
+    rgba(255, 192, 72, 0) 65%
+  );
+  transform: rotate(8deg);
+  pointer-events: none;
+  animation: glowStreak 5.2s ease-in-out infinite;
+}
+
+.table-wrap::-webkit-scrollbar {
+  height: 10px;
+}
+
+.table-wrap::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, rgba(255, 194, 78, 0.7), rgba(180, 108, 0, 0.8));
+  border-radius: 99px;
+}
+
+.table-wrap::-webkit-scrollbar-track {
+  background: rgba(255, 207, 111, 0.1);
+}
+
+#map {
+  transform: translateZ(0);
+}
+
+.map-panel {
+  transform-style: preserve-3d;
+}
+
+.map-panel:hover {
+  transform: perspective(1100px) rotateX(1.2deg) rotateY(-1.2deg);
+}
+
+.story-grid .story-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.story-grid .story-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.story-grid .story-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.story-grid .story-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.story-grid .story-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.song-grid .song-card:nth-child(1) {
+  animation-delay: 0.12s;
+}
+.song-grid .song-card:nth-child(2) {
+  animation-delay: 0.24s;
+}
+.song-grid .song-card:nth-child(3) {
+  animation-delay: 0.36s;
+}
+
+.timeline-item {
+  border-left: 4px solid rgba(255, 200, 87, 0.62);
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #ffd25e;
+  left: -7px;
+  top: calc(50% - 6px);
+  box-shadow: 0 0 12px rgba(255, 193, 59, 0.72);
+}
+
+.art-canvas-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 20% 15%, rgba(255, 242, 213, 0.08), transparent 30%),
+    radial-gradient(circle at 80% 80%, rgba(255, 180, 57, 0.12), transparent 35%);
+  pointer-events: none;
+}
+
+body.lang-marathi h1,
+body.lang-marathi h2,
+body.lang-marathi h3,
+body.lang-marathi h4,
+body.lang-marathi .section-tag,
+body.lang-marathi .brand-title,
+body.lang-marathi .intro-mantra,
+body.lang-marathi .timeline-year {
+  font-family: "Tiro Devanagari Marathi", serif;
+  letter-spacing: 0;
+}
+
+@media (max-width: 980px) {
+  .hero::after {
+    width: 55%;
+  }
+
+  .map-panel:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero-particle {
+    display: none;
+  }
+}

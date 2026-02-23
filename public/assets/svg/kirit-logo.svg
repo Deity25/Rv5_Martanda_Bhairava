@@ -1,0 +1,36 @@
+<svg width="480" height="260" viewBox="0 0 480 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="480" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff6b0"/>
+      <stop offset="0.4" stop-color="#ffd34f"/>
+      <stop offset="1" stop-color="#c67a00"/>
+    </linearGradient>
+    <linearGradient id="ruby" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb8c5"/>
+      <stop offset="1" stop-color="#a11f30"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <path d="M40 220 Q240 70 440 220 Z" fill="url(#gold)" stroke="#8a5100" stroke-width="6"/>
+  <path d="M70 210 Q240 120 410 210" stroke="#8a5100" stroke-width="5" stroke-linecap="round"/>
+
+  <path d="M72 180 L120 80 L168 180 Z" fill="url(#gold)" stroke="#8a5100" stroke-width="5"/>
+  <path d="M156 170 L220 30 L284 170 Z" fill="url(#gold)" stroke="#8a5100" stroke-width="5"/>
+  <path d="M276 180 L332 82 L388 180 Z" fill="url(#gold)" stroke="#8a5100" stroke-width="5"/>
+
+  <circle cx="120" cy="145" r="15" fill="url(#ruby)" stroke="#7a1120" stroke-width="3" filter="url(#glow)"/>
+  <circle cx="240" cy="122" r="20" fill="url(#ruby)" stroke="#7a1120" stroke-width="4" filter="url(#glow)"/>
+  <circle cx="332" cy="145" r="15" fill="url(#ruby)" stroke="#7a1120" stroke-width="3" filter="url(#glow)"/>
+
+  <rect x="80" y="206" width="320" height="18" rx="8" fill="#8a5100"/>
+  <rect x="88" y="192" width="304" height="16" rx="7" fill="#f7b500"/>
+
+  <path d="M208 224 C220 250 260 250 272 224" stroke="#8a5100" stroke-width="4" fill="none"/>
+</svg>
