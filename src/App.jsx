@@ -29,7 +29,6 @@ function makeParticles() {
 function wrapIndex(index, size) {
   return ((index % size) + size) % size;
 }
-
 export default function App() {
   const [language, setLanguage] = useState("en");
   const [menuOpen, setMenuOpen] = useState(false);
