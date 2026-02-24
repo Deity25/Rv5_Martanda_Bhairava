@@ -10,7 +10,6 @@ export default function AiArtSection({ prompts, artSeed, onRegenerate }) {
       drawDevotionalArt(canvas, index + artSeed * 37, prompts[index].title);
     });
   }, [artSeed, prompts]);
-
   return (
     <section id="ai-art" className="ai-art section-frame">
       <div className="section-head">
