@@ -9,7 +9,6 @@ import TempleSection from "./components/TempleSection";
 import YatraPlannerSection from "./components/YatraPlannerSection";
 import AiArtSection from "./components/AiArtSection";
 import Footer from "./components/Footer";
-
 function makeParticles() {
   const isNarrow = typeof window !== "undefined" && window.innerWidth < 700;
   const count = isNarrow ? 28 : 54;
@@ -24,7 +23,6 @@ function makeParticles() {
     drift: -80 + Math.random() * 160,
   }));
 }
-
 function wrapIndex(index, size) {
   return ((index % size) + size) % size;
 }
