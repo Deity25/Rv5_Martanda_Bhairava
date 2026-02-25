@@ -3,7 +3,7 @@
 ## Run locally
 
 ```bash
-cd /Users/gaurishankarvhadle/Documents/SG_Aagnam/Khandoba_Divya_Darbar_React
+cd /Users///SG_Aagnam/Khandoba_Divya_Darbar_React
 npm install
 npm run dev
 ```
