@@ -204,7 +204,6 @@ export default function YatraPlannerSection({ temples, specialNodes, circuits, l
 
     return lines.join("\n");
   };
-
   const copyPlan = async () => {
     try {
       await navigator.clipboard.writeText(buildPlanText());
@@ -215,7 +214,6 @@ export default function YatraPlannerSection({ temples, specialNodes, circuits, l
       setTimeout(() => setCopyStatus(""), 2200);
     }
   };
-
   const downloadPlan = () => {
     const text = buildPlanText();
     const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
@@ -228,7 +226,6 @@ export default function YatraPlannerSection({ temples, specialNodes, circuits, l
     anchor.remove();
     URL.revokeObjectURL(url);
   };
-
   return (
     <section id="yatra" className="yatra section-frame">
       <div className="section-head">
@@ -237,7 +234,6 @@ export default function YatraPlannerSection({ temples, specialNodes, circuits, l
         <h2 className="lang-en">Yatra Route Planner</h2>
         <h2 className="lang-mr">यात्रा मार्ग नियोजक</h2>
       </div>
-
       <div className="yatra-layout">
         <article className="panel ornate">
           <h3 className="lang-en">Select Circuit</h3>
@@ -294,11 +290,9 @@ export default function YatraPlannerSection({ temples, specialNodes, circuits, l
             ))}
           </ol>
         </article>
-
         <article className="panel ornate">
           <h3 className="lang-en">Distance & Time Estimate</h3>
           <h3 className="lang-mr">अंतर व वेळ अंदाज</h3>
-
           <div className="yatra-stats-grid">
             <div className="meta-card">
               <h5 className="lang-en">Road Distance</h5>
@@ -321,7 +315,6 @@ export default function YatraPlannerSection({ temples, specialNodes, circuits, l
               <p>{segmentData.totalJourneyHours.toFixed(1)} h</p>
             </div>
           </div>
-
           <div className="table-wrap route-segment-wrap">
             <table className="data-table" aria-label="Route segments">
               <thead>
@@ -352,7 +345,6 @@ export default function YatraPlannerSection({ temples, specialNodes, circuits, l
               </tbody>
             </table>
           </div>
-
           {segmentData.unknownSegments > 0 ? (
             <p className="route-warning lang-en">
               {segmentData.unknownSegments} segment(s) include a node with unconfirmed map coordinates.
@@ -363,7 +355,6 @@ export default function YatraPlannerSection({ temples, specialNodes, circuits, l
               {segmentData.unknownSegments} टप्प्यांमध्ये अपुष्ट नकाशा समन्वय असलेले स्थळ आहे.
             </p>
           ) : null}
-
           <div className="route-export-row">
             <button className="btn solid" onClick={copyPlan}>
               {language === "mr" ? "योजना कॉपी" : "Copy plan"}
@@ -377,7 +368,6 @@ export default function YatraPlannerSection({ temples, specialNodes, circuits, l
               </a>
             ) : null}
           </div>
-
           {copyStatus ? <small className="copy-status">{copyStatus}</small> : null}
         </article>
       </div>
