@@ -384,4 +384,3 @@ export default function YatraPlannerSection({ temples, specialNodes, circuits, l
     </section>
   );
 }
-
