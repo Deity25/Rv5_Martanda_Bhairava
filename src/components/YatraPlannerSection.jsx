@@ -29,7 +29,6 @@ export default function YatraPlannerSection({ temples, specialNodes, circuits, l
       subEn: `${item.district}, ${item.state}`,
       subMr: `${item.district}, ${item.state}`,
     }));
-
     const extraNodes = specialNodes.map((item) => ({
       id: item.id,
       labelEn: item.labelEn,
@@ -40,44 +39,35 @@ export default function YatraPlannerSection({ temples, specialNodes, circuits, l
       subEn: item.noteEn,
       subMr: item.noteMr,
     }));
-
     return [...templeNodes, ...extraNodes];
   }, [temples, specialNodes]);
-
   const allNodeById = useMemo(() => {
     const map = new Map();
     allNodes.forEach((item) => map.set(item.id, item));
     return map;
   }, [allNodes]);
-
   const selectedCircuit = useMemo(
     () => circuits.find((item) => item.id === selectedCircuitId) || circuits[0],
     [circuits, selectedCircuitId]
   );
-
   const selectedStops = useMemo(
     () => selectedStopIds.map((id) => allNodeById.get(id)).filter(Boolean),
     [selectedStopIds, allNodeById]
   );
-
   const segmentData = useMemo(() => {
     const segments = [];
     let totalRoadKm = 0;
     let totalDriveHours = 0;
     let unknownSegments = 0;
-
     for (let index = 0; index < selectedStops.length - 1; index += 1) {
       const from = selectedStops[index];
       const to = selectedStops[index + 1];
-
       if (isCoordAvailable(from) && isCoordAvailable(to)) {
         const straightKm = haversineKm(from.lat, from.lng, to.lat, to.lng);
         const roadKm = straightKm * 1.22;
         const driveHours = roadKm / 48;
-
         totalRoadKm += roadKm;
         totalDriveHours += driveHours;
-
         segments.push({
           from,
           to,
@@ -95,10 +85,8 @@ export default function YatraPlannerSection({ temples, specialNodes, circuits, l
         });
       }
     }
-
     const ritualHours = Math.max(1, selectedStops.length * 0.75);
     const totalJourneyHours = totalDriveHours + ritualHours;
-
     return {
       segments,
       totalRoadKm,
