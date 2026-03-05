@@ -108,57 +108,46 @@ export default function YatraPlannerSection({ temples, specialNodes, circuits, l
       unknownSegments,
     };
   }, [selectedStops]);
-
   const mapsLink = useMemo(() => {
     const geoStops = selectedStops.filter((item) => isCoordAvailable(item));
     if (geoStops.length < 2) return "";
-
     const origin = `${geoStops[0].lat},${geoStops[0].lng}`;
     const destination = `${geoStops[geoStops.length - 1].lat},${geoStops[geoStops.length - 1].lng}`;
     const waypoints = geoStops
       .slice(1, -1)
       .map((item) => `${item.lat},${item.lng}`)
       .join("|");
-
     const params = new URLSearchParams({
       api: "1",
       origin,
       destination,
       travelmode: "driving",
     });
-
     if (waypoints) {
       params.set("waypoints", waypoints);
     }
-
     return `https://www.google.com/maps/dir/?${params.toString()}`;
   }, [selectedStops]);
-
   useEffect(() => {
     if (!selectedCircuit) return;
     setSelectedStopIds(selectedCircuit.stops);
   }, [selectedCircuit]);
-
   const moveStop = (index, direction) => {
     const nextIndex = index + direction;
     if (nextIndex < 0 || nextIndex >= selectedStopIds.length) return;
-
     const next = [...selectedStopIds];
     const [picked] = next.splice(index, 1);
     next.splice(nextIndex, 0, picked);
     setSelectedStopIds(next);
   };
-
   const removeStop = (index) => {
     setSelectedStopIds((prev) => prev.filter((_, idx) => idx !== index));
   };
-
   const addStop = () => {
     if (!addStopId || selectedStopIds.includes(addStopId)) return;
     setSelectedStopIds((prev) => [...prev, addStopId]);
     setAddStopId("");
   };
-
   const buildPlanText = () => {
     const lines = [];
     const title = language === "mr" ? "यात्रा मार्ग योजना" : "Yatra Route Plan";
@@ -166,12 +155,10 @@ export default function YatraPlannerSection({ temples, specialNodes, circuits, l
     lines.push("=");
     lines.push(language === "mr" ? `परिक्रमा: ${selectedCircuit?.nameMr || "Custom"}` : `Circuit: ${selectedCircuit?.nameEn || "Custom"}`);
     lines.push("");
-
     lines.push(language === "mr" ? "थांबे:" : "Stops:");
     selectedStops.forEach((stop, index) => {
       lines.push(`${index + 1}. ${language === "mr" ? stop.labelMr : stop.labelEn}`);
     });
-
     lines.push("");
     lines.push(
       language === "mr"
@@ -193,7 +180,6 @@ export default function YatraPlannerSection({ temples, specialNodes, circuits, l
         ? `एकूण यात्रा वेळ: ${segmentData.totalJourneyHours.toFixed(1)} तास`
         : `Total yatra estimate: ${segmentData.totalJourneyHours.toFixed(1)} hours`
     );
-
     if (segmentData.unknownSegments > 0) {
       lines.push(
         language === "mr"
@@ -201,7 +187,6 @@ export default function YatraPlannerSection({ temples, specialNodes, circuits, l
           : `Note: ${segmentData.unknownSegments} segment(s) have no exact geocoordinates.`
       );
     }
-
     return lines.join("\n");
   };
   const copyPlan = async () => {
