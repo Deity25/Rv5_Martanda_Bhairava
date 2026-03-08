@@ -56,7 +56,6 @@ export const SITE_DATA = {
       sourceLabel: "Wikimedia Commons (Temple ritual visuals)",
     },
   ],
-
   quickStats: [
     {
       key: "regions",
