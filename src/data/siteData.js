@@ -6,7 +6,6 @@ export const SITE_DATA = {
     disclaimer:
       "This website mixes documented history, living oral traditions, and user-provided family notes. Mythic narratives are marked as tradition and not modern historical proof.",
   },
-
   heroSlides: [
     {
       id: "hero-1",
