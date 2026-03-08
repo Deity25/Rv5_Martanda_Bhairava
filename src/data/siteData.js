@@ -86,7 +86,6 @@ export const SITE_DATA = {
       valueMr: "भंडारा (हळदीचे अर्पण)",
     },
   ],
-
   manuscripts: [
     {
       id: "manu-1",
@@ -154,7 +153,6 @@ export const SITE_DATA = {
         "Useful for distinguishing documented history from evolving devotional lore.",
     },
   ],
-
   templeAtlas: [
     {
       id: "temple-jejuri",
@@ -408,7 +406,6 @@ export const SITE_DATA = {
         "https://commons.wikimedia.org/wiki/File:Mailar_mallanna_temple_Entrance_Bidar.JPG",
     },
   ],
-
   templeProfiles: [
     {
       templeId: "temple-jejuri",
@@ -526,7 +523,6 @@ export const SITE_DATA = {
         "कौटुंबिक यात्रेसाठी फोंडा-पणजी परिसरातील निवास सोयीचा.",
     },
   ],
-
   yatraSpecialNodes: [
     {
       id: "special-tuljabhavani",
@@ -558,7 +554,6 @@ export const SITE_DATA = {
         "स्थानिक कुटुंबपरंपरेनुसार अचूक स्थळबिंदू बदलू शकतो; प्रवासापूर्वी घरातील ज्येष्ठांकडून पडताळणी करा.",
     },
   ],
-
   yatraCircuits: [
     {
       id: "circuit-core",
@@ -608,7 +603,6 @@ export const SITE_DATA = {
       ],
     },
   ],
-
   storyVault: [
     {
       id: "story-mani-malla",
@@ -695,7 +689,6 @@ export const SITE_DATA = {
       symbols: ["Ovi", "Daf", "Community memory"],
     },
   ],
-
   storyDossiers: [
     {
       id: "dossier-khanda-gift",
