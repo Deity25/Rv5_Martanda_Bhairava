@@ -11,6 +11,7 @@ import AiArtSection from "./components/AiArtSection";
 import Footer from "./components/Footer";
 
 function makeParticles() {
+  
   const isNarrow = typeof window !== "undefined" && window.innerWidth < 700;
   const count = isNarrow ? 28 : 54;
   return Array.from({ length: count }, (_, index) => ({
