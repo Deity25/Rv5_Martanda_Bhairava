@@ -29,6 +29,7 @@ function makeParticles() {
     
   }));
 }
+
 function wrapIndex(index, size) {
   return ((index % size) + size) % size;
 }
