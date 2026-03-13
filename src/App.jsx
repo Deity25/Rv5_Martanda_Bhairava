@@ -9,6 +9,7 @@ import TempleSection from "./components/TempleSection";
 import YatraPlannerSection from "./components/YatraPlannerSection";
 import AiArtSection from "./components/AiArtSection";
 import Footer from "./components/Footer";
+
 function makeParticles() {
   const isNarrow = typeof window !== "undefined" && window.innerWidth < 700;
   const count = isNarrow ? 28 : 54;
