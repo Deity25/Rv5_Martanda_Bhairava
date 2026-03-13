@@ -15,6 +15,7 @@ function makeParticles() {
   const isNarrow = typeof window !== "undefined" && window.innerWidth < 700;
   
   const count = isNarrow ? 28 : 54;
+  
   return Array.from({ length: count }, (_, index) => ({
     id: index,
     size: 6 + Math.random() * 9,
