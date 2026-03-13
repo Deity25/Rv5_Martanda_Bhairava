@@ -17,6 +17,7 @@ function makeParticles() {
   const count = isNarrow ? 28 : 54;
   
   return Array.from({ length: count }, (_, index) => ({
+    
     id: index,
     size: 6 + Math.random() * 9,
     left: Math.random() * 100,
@@ -25,6 +26,7 @@ function makeParticles() {
     duration: 8 + Math.random() * 9,
     delay: -16 + Math.random() * 16,
     drift: -80 + Math.random() * 160,
+    
   }));
 }
 function wrapIndex(index, size) {
