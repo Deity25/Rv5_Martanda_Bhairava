@@ -11,7 +11,6 @@ const NAV_ITEMS = [
   { href: "#legacy", label: "Legacy" },
   { href: "#sources", label: "Sources" },
 ];
-
 export default function Header({ language, menuOpen, onToggleLanguage, onToggleMenu, onCloseMenu }) {
   return (
     <header className="site-header" id="top">
