@@ -25,7 +25,6 @@ export default function Header({ language, menuOpen, onToggleLanguage, onToggleM
           <p className="brand-sub">Marathi + English Living Archive</p>
         </div>
       </div>
-
       <div className="header-actions">
         <button id="langToggle" className="btn ghost" aria-label="Toggle language" onClick={onToggleLanguage}>
           <span className={`lang-pill ${language === "en" ? "active" : ""}`} data-lang-target="en">
