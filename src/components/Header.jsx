@@ -34,7 +34,6 @@ export default function Header({ language, menuOpen, onToggleLanguage, onToggleM
             मराठी
           </span>
         </button>
-
         <button id="menuToggle" className="btn ghost mobile-only" aria-label="Open menu" onClick={onToggleMenu}>
           ☰
         </button>
