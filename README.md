@@ -6,7 +6,6 @@ cd /Users///SG_Aagnam/Khandoba_Divya_Darbar_React
 npm install
 npm run dev
 ```
-
 Open the URL printed by Vite (usually `http://localhost:5173`).
 
 ## Build for production
