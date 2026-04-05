@@ -19,7 +19,7 @@ function makeParticles() {
   return Array.from({ length: count }, (_, index) => ({
     
     id: index,
-    size: 6 + Math.random() * 9,
+    size: 7 + Math.random() * 9,
     left: Math.random() * 100,
     top: -28 + Math.random() * 34,
     opacity: 0.2 + Math.random() * 0.7,
