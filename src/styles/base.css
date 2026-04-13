@@ -88,7 +88,6 @@ a {
   opacity: 0.08;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='%23fff6d5' fill-opacity='0.2'%3E%3Ccircle cx='9' cy='10' r='1'/%3E%3Ccircle cx='33' cy='22' r='1'/%3E%3Ccircle cx='94' cy='17' r='1'/%3E%3Ccircle cx='110' cy='33' r='1'/%3E%3Ccircle cx='70' cy='80' r='1'/%3E%3Ccircle cx='51' cy='101' r='1'/%3E%3Ccircle cx='117' cy='117' r='1'/%3E%3Ccircle cx='18' cy='99' r='1'/%3E%3C/g%3E%3C/svg%3E");
 }
-
 .loader {
   position: fixed;
   inset: 0;
