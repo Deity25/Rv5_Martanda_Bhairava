@@ -1046,7 +1046,6 @@ export const SITE_DATA = {
       mr: "योद्धा प्रतिमा आणि विधी-स्मृतीशी जोडलेला खड्ग.",
     },
   ],
-
   aiArtPrompts: [
     {
       id: "prompt-1",
