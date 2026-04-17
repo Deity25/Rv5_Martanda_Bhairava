@@ -1,5 +1,4 @@
 # Shri Khandoba Divya Darbar (React + Vite)
-
 ## Run locally
 ```bash
 cd /Users///SG_Aagnam/Khandoba_Divya_Darbar_React
