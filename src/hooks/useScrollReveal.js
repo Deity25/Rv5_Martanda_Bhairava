@@ -2,7 +2,6 @@ import { useEffect } from "react";
 
 const SELECTOR =
   ".section-head h2, .section-head p, .panel, .table-wrap, .story-card, .song-card, .art-card, .timeline-item, .glossary-card, .stat-card";
-
 export function useScrollReveal(triggerValues = []) {
   useEffect(() => {
     const targets = Array.from(document.querySelectorAll(SELECTOR));
