@@ -10,8 +10,7 @@ export function useScrollReveal(triggerValues = []) {
       targets.forEach((node) => node.classList.add("in-view"));
       return undefined;
     }
-
-    const observer = new IntersectionObserver(
+  const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
