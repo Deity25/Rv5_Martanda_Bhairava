@@ -135,7 +135,6 @@ export default function App() {
           onTempleSearchChange={setTempleSearch}
           language={language}
         />
-
         <YatraPlannerSection
           temples={SITE_DATA.templeAtlas}
           specialNodes={SITE_DATA.yatraSpecialNodes}
