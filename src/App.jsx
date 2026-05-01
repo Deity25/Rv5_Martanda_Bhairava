@@ -149,7 +149,6 @@ export default function App() {
           onRegenerate={() => setArtSeed((prev) => prev + 1)}
         />
       </main>
-
       <Footer disclaimer={SITE_DATA.siteMeta.disclaimer} />
     </>
   );
