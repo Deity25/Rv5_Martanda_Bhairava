@@ -142,7 +142,6 @@ export default function App() {
           circuits={SITE_DATA.yatraCircuits}
           language={language}
         />
-
         <AiArtSection
           prompts={SITE_DATA.aiArtPrompts}
           artSeed={artSeed}
