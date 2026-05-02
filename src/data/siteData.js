@@ -864,7 +864,6 @@ export const SITE_DATA = {
       note: "Menu differs temple to temple.",
     },
   ],
-
   songs: [
     {
       id: "song-1",
