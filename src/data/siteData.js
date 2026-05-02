@@ -993,7 +993,6 @@ export const SITE_DATA = {
       },
     ],
   },
-
   familyLegacy: {
     headingEn: "Submitted Lineage Note (Project Patron)",
     headingMr: "प्रकल्प संरक्षकाकडून दिलेली वंशपरंपरा नोंद",
