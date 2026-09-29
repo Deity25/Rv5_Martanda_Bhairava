@@ -1199,5 +1199,11 @@ export const SITE_DATA = {
       link: "https://www.srisailadevasthanam.org/",
       type: "Temple administration reference",
     },
+    {
+      id: "src-20",
+      label: "Srisailam Devasthanam (Mallikarjuna reference)",
+      link: "https://www.srisailadevasthanam.org/",
+      type: "Temple administration reference",
+    },
   ],
 };
