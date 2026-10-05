@@ -1,6 +1,6 @@
 # Shri Khandoba Divya Darbar (React + Vite)
 
-## On Local
+## On Local Machine
 ```bash
 cd /Users///SG_Aagnam/Khandoba_Divya_Darbar_React
 npm install
