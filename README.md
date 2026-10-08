@@ -1,4 +1,4 @@
-# Shri Khandoba Divya Darbar (React + Vite)
+Shri Khandoba Divya Darbar (React + Vite)
 
 ## On Local Machine
 ```bash
