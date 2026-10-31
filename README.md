@@ -25,4 +25,4 @@ npm run preview
 - `public/assets/svg/`: kirit and khanda vector assets
 
 - The Run Locally due to hosting not done
-- We can do 
+- We can do by Vercel
