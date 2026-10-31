@@ -24,4 +24,4 @@ npm run preview
 - `src/utils/art.js`: procedural devotional canvas art generator
 - `public/assets/svg/`: kirit and khanda vector assets
 
-- The Run Locally 
+- The Run Locally due to hosting not done
