@@ -23,3 +23,5 @@ npm run preview
 - `src/styles/effects.css`: animation system
 - `src/utils/art.js`: procedural devotional canvas art generator
 - `public/assets/svg/`: kirit and khanda vector assets
+
+- The Run Locally 
