@@ -27,5 +27,3 @@ npm run preview
 - The Run Locally due to hosting not done
 - We can do by Vercel
 - I have Done previously on the Railways
-- 
-- 
